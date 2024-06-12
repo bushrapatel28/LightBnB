@@ -20,20 +20,17 @@ const pool = new Pool({
  * @return {Promise<{}>} A promise to the user.
  */
 const getUserWithEmail = function (email) {
-  let resolvedUser = null;
-  const userWithEmail = pool
-    .query(`SELECT * FROM users WHERE email LIKE $1`, [email])
+  return pool
+    .query(`SELECT * FROM users WHERE email = $1`, [email])
     .then((result) => {
+      if(!result.rows[0]) {
+        return null;
+      }
       return result.rows[0];
     })
     .catch((err) => {
       console.log(err.message);
     });
-
-  if (userWithEmail) {
-    resolvedUser = userWithEmail;
-  }
-  return Promise.resolve(resolvedUser);
 };
 
 /**
