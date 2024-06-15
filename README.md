@@ -23,12 +23,14 @@ LightBnB will revolutionize the travel industry. It will allow home owners to re
 
 ```
 .
-├── queries 
+├── queries
 │   ├── 1_user_login.sql
 │   ├── 2_avg_length_of_reservation.sql
 │   ├── 3_property_listings_by_city.sql
 │   ├── 4_most_visited_cities.sql
 │   └── 5_all_my_reservations.sql
+├── docs
+│   └── LightBnB.drawio.png
 ├── LightBnB_WebApp
 │    ├── db
 │    │   ├── json
@@ -75,6 +77,8 @@ LightBnB will revolutionize the travel industry. It will allow home owners to re
 
 * `queries` contains SQL queries to fetch data from the database.
 
+* `docs` contains LightBnB's ERD.
+
 * `LightBnB_WebApp`
   * `db` contains all the database interaction code.
     * `json` is a directory that contains a bunch of dummy data in `.json` files.
@@ -96,4 +100,4 @@ LightBnB will revolutionize the travel industry. It will allow home owners to re
 
 ## ERD for LightBnB
 
-![Screenshot of LightBnB ERD]()
+!["Screenshot of LightBnB ERD"](https://github.com/bushrapatel28/LightBnB/blob/main/docs/LightBnB.drawio.png?raw=true)
